@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/form.css" />
+    <link rel="stylesheet" href="style/modal.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <img src="assets/top-image.svg" alt="" />
+      <div class="infoOfForm">
+        <h1>Reserve já a sua passagem para essa viagem</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="infoOfClient">
+        <h2>Preencha seu pedido</h2>
+        <p>
+          Preencha o formulário abaixo com as informações para a reserva da sua passagem.
+          Garanta a melhor experiência da sua vida nessa aventura interestelar.
+        </p>
+      </div>
+
+      <section class="form">
+        <div class="infoOfContact">
+          <h2>Informações de contato</h2>
+          <p>Por favor, preencha seus dados para que possamos entrar em contato com você</p>
+        </div>
+
+        <form action="" id="formOfInfoContact">
+          <label for="name">
+            Nome
+            <input id="name" type="text" placeholder="Seu nome" required />
+          </label>
+
+          <label for="phone">
+            Telefone
+            <input
+              id="phone"
+              type="number"
+              placeholder="(99) 99999-9999"
+              pattern="^\(?[1-9]{2}\?) (?:[2-8]|9[1-9])[0-9]{3}\-[0-9]{4}$"
+              required
+            />
+            <!-- ^ - Início da string.
+\( - Um abre parênteses.
+[1-9]{2} - Dois dígitos de 1 a 9. Não existem códigos de DDD com o dígito 0.
+\) - Um fecha parênteses.
+  - Um espaço em branco.
+(?:[2-8]|9[1-9]) - O início do número. Representa uma escolha entre um dígito de 2 a 8 (a parte do [2-8]) e de um 9 seguido de um dígito de 1 a 9 (a parte do 9[1-9]). O | separa as opções a serem escolhidas. O (?: ... ) agrupa tais escolhas. Telefones fixos começam com dígitos de 2 a 8. Telefones celulares começam com 9 e têm um segundo dígito de 1 a 9. O primeiro dígito nunca será 0 ou 1. Celulares não podem começar com 90 porque esse é o prefixo para ligações a cobrar.
+[0-9]{3} - Os demais três dígitos da primeira metade do número do telefone, perfazendo um total de 4 ou 5 dígitos na primeira metade.
+\- - Um hífen.
+[0-9]{4} - A segunda metade do número do telefone.
+$ - Final da string.-->
+          </label>
+
+          <label for="email">
+            Email
+            <input id="email" type="email" placeholder="Seu endereço de email" required />
+          </label>
+
+          <label for="date">
+            Data
+            <input id="date" type="date" required />
+          </label>
+        </form>
+      </section>
+      <div class="buttonSubmit">
+        <button form="formOfInfoContact" type="submit" method="post">Next</button>
+      </div>
+    </main>
+
+    <div id="modalOverlay" class="hidden"></div>
+    <div id="modalContent" class="hidden">
+      <div class="modalHeader">
+        <h2>As informações estão corretas?</h2>
+        <button class="closeModal"><img src="assets/x.svg" alt="" /></button>
+      </div>
+      <div class="modalBody">
+        <p class="description"></p>
+      </div>
+
+      <div class="buttonConfirmCancel">
+        <button id="cancel">Corrigir</button>
+        <button id="confirm">Confirmar</button>
+      </div>
+    </div>
+
+    <footer><img src="assets/bottom-image.svg" alt="" /></footer>
+
+    <script src="javascript/form.js"></script>
+  </body>
+</html>

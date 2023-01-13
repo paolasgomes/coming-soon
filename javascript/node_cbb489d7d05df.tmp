@@ -1,0 +1,36 @@
+// function startTimer(duration, display) {
+//   let timer = duration,
+//     minutes,
+//     seconds;
+
+//   setInterval(function () {
+//     minutes = parseInt(timer / 60, 10);
+//     seconds = parseInt(timer % 60, 10);
+
+//     minutes = minutes < 10 ? "0" + minutes : minutes;
+//     /*Se os minutos forem menores que 10 (true), vai adicionar um 0 + minuto
+//     Se for falso, vai manter os minutos normais*/
+//     seconds = seconds < 10 ? "0" + seconds : seconds;
+
+//     display.textContent = `${minutes} : ${seconds}`;
+
+//     if (--timer < 0) {
+//       timer = duration;
+//     }
+//   }, 1000);
+// }
+
+// window.onload = function () {
+//   var duration = 60 * 4;
+
+//   var display = document.querySelector("div.timer");
+
+//   startTimer(duration, display);
+// };
+
+let countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+let timer = setInterval(function () {
+  let now = new Date().getTime();
+  let distance = countDownDate - now;
+  console.log("distance => ", distance);
+});

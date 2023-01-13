@@ -1,0 +1,168 @@
+body {
+  padding: 0 5%;
+
+  height: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin: 0 -5%;
+}
+
+header img {
+  width: 100%;
+  object-fit: cover;
+}
+
+div.infoOfForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: min(60rem, 100%);
+  height: min(6.75rem);
+}
+
+header div.infoOfForm h1 {
+  padding: 0 5%;
+
+  font-weight: 600;
+  color: var(--purple);
+
+  text-align: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.infoOfClient {
+  width: min(43rem, 100%);
+
+  margin-top: 4rem;
+}
+
+div.infoOfClient h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--purple);
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+div.infoOfClient p {
+  color: var(--text-color);
+
+  text-align: center;
+}
+
+section.form {
+  margin-top: 4rem;
+
+  width: min(43.75rem, 100%);
+
+  background-color: rgba(239, 240, 246, 1);
+
+  border: 1px solid rgba(239, 240, 246, 1);
+  border-radius: 34px;
+
+  padding-bottom: 2.5rem;
+}
+
+section.form div.infoOfContact {
+  padding: 1.5rem 2.5rem;
+  width: 100%;
+  border-bottom: 1px solid rgba(217, 219, 233, 1);
+}
+
+section.form div.infoOfContact h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--purple);
+  margin-bottom: 0.3rem;
+}
+
+section.form div.infoOfContact p {
+  color: var(--text-color);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+section.form form#formOfInfoContact {
+  width: 100%;
+}
+
+section.form form#formOfInfoContact label {
+  display: flex;
+  flex-direction: column;
+
+  height: min(6.5rem, 100%);
+  width: 100%;
+
+  padding: 1.5rem 2.5rem;
+
+  color: var(--purple);
+  font-weight: 500;
+}
+
+section.form form#formOfInfoContact label input {
+  margin-top: 1.2rem;
+
+  height: min(4.5rem);
+  border: 1px solid rgba(239, 240, 246, 1);
+  box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+  border-radius: 46px;
+  box-sizing: border-box;
+  padding: 1.2rem 0 1.5rem 1.2rem;
+}
+
+section.form form#formOfInfoContact label input[type="number"]::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  appearance: none;
+}
+
+section.form form#formOfInfoContact label input[type="date"] {
+  color: var(--text-color);
+  padding-right: 1rem;
+}
+
+main div.buttonSubmit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+main div.buttonSubmit button {
+  background: linear-gradient(180deg, #9e96f2 0%, #ec31f0 100%);
+  box-shadow: 0px 3px 12px rgba(74, 58, 255, 0.18);
+  border-radius: 56px;
+  border: transparent;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+
+  width: min(8.5rem);
+  height: min(3.8rem);
+}
+
+main div.buttonSubmit button a {
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  margin: 5rem -5% 0;
+  height: 100%;
+}
+
+footer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
